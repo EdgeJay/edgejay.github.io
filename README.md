@@ -1,0 +1,1 @@
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). Original README file can be found [here](/docs/create-react-app.md)
