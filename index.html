@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EdgeJay - Mobile &amp; Web Developer</title>
+    <title>EdgeJay - Fullstack Developer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -98,6 +98,7 @@
                                 </a>
                             </li>
                         </ul>
+                        <small>You will be redirected to https://edgejay.works in <span id="countdown">10</span> seconds...</small>
                     </div>
                 </div>
             </div>
@@ -111,6 +112,8 @@
     <!-- Page Content -->
 
 	<a  name="services"></a>
+    
+    <!--
     <div class="content-section-a">
 
         <div class="container">
@@ -127,9 +130,8 @@
             </div>
 
         </div>
-        <!-- /.container -->
-
     </div>
+    -->
     <!-- /.content-section-a -->
     
     <!--
@@ -182,9 +184,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
-                </div>
+                <div class="col-lg-6"></div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
                         <li>
@@ -230,7 +230,7 @@
                         </li>
                     </ul>
                     -->
-                    <p class="copyright text-muted small">Copyright &copy; EdgeJay 2015. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Copyright &copy; EdgeJay 2021. All Rights Reserved</p>
                 </div>
             </div>
         </div>
@@ -242,6 +242,20 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script>
+        var secondsLeft = 10;
+        var countdownElem = document.getElementById('countdown');
+        var countdownCheck = function () {
+            if (secondsLeft > 0) {
+                secondsLeft -= 1;
+                document.getElementById('countdown').innerText = secondsLeft;
+                setTimeout(countdownCheck, 1000);
+            } else {
+                window.location.href = 'https://edgejay.works';
+            }
+        };
+        setTimeout(countdownCheck, 1000);
+    </script>
 </body>
 
 </html>
